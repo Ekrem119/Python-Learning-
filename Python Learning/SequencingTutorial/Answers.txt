@@ -1,0 +1,28 @@
+B. Dowloading the files
+//////////////////////////////////////
+1-What sequencing platform was used to do the sequencing run?
+ILLUMINA
+2-What is the instrument model used?
+Illumina HiSeq 2000
+3-What is the library type used for the sequencing? Paired-end? Single-end or mate-pair?
+Paired-end
+4-What is the type of molecules that have been sequenced?
+DNA
+5-A the bottom of the page, you can see two fastq file names.
+6-What is the extension of these files? What does it indicate?
+fastq.gz Its indicates its compressed DNA file.
+7-Are these files expected to be different in their contents? Justify your answer.
+File 1 will reads in Forward and File 2  reads in reverse ends so the actual nucleotide strings are different. 
+8-Select both of the files and click on Get Download script.
+9-What are the sizes of both files?
+22.905 KB
+
+C. Analyzing the files
+////////////////////////////////
+1-How many reads do we have in each of the two files? Verify with a Python script that they are correctly paired.
+SRR800768_1_sub.fastq has 100000 reads.
+SRR800768_2_sub.fastq has 100000 reads.
+2-What is the read length?
+Read length is: 101 bp
+3-Plot the reads per base content for each of the fastq files: the x axis is the position on the read (0 to read length - 1) and on the y axis the percentages of each base (A in red, T in green, C in blue and G in black).
+4-What do you notice regarding the relative quantity of the different bases? Is it an expected result? Justify your answer.
