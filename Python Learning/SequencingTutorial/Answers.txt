@@ -42,7 +42,7 @@ The x-axis represents the position on the read, and the y-axis depicts the media
 
 7-Is the quality of the bases homogeneous across the read? Propose a hypothesis explaining that.
 As we can see from the graph the quality is not homegeneous across the read.
-Hypothesis: This pattern is a charactheristic of Illumina sequencing chemistry often called signal decay or drop.
+Hypothesis: When I did research on the internet I found this pattern is a charactheristic of Illumina sequencing chemistry often called signal decay or drop.
 This can happen because when the machine performs the cycle after cyle, some DNA molecules
 become out of sync and some molecules lag behind. As the reads gets longer this out of sync molecules become larger.
 As a result the machine becomes less confident in its base calls towards the end of the read, resulting in lower Phred quality scores at the 3' end.

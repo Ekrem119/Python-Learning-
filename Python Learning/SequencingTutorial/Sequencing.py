@@ -94,7 +94,7 @@ qual_by_pos = [[] for _ in range(read_length)]
 for record in records:
     phred_scores = record.letter_annotations["phred_quality"]
     for i, score in enumerate(phred_scores):
-        if i < read_length: # Safety check
+        if i < read_length:
             qual_by_pos[i].append(score)
 
 medians = []
@@ -118,6 +118,7 @@ plt.legend()
 plt.grid(alpha=0.3)
 plt.show()
 
+## Eighth Question - Trimming reads based on quality
 """ def trim_read(record, quality_threshold=20):
     qualities = record.letter_annotations["phred_quality"]
     
@@ -163,10 +164,10 @@ out_p2.close()
 out_u1.close()
 out_u2.close()
 
-print("Trimming and filtering complete.") """
+print("Trimming is complete.") """
 
-#Plot for the cleaned data
-print("Generating Quality Plot for Clean Data...")
+## Plot for the cleaned data
+print("Generating Plot for Clean Data")
 
 clean_filename = "paired_1.fastq"
 clean_records = list(SeqIO.parse(clean_filename, "fastq"))
@@ -192,7 +193,6 @@ for i, scores in enumerate(clean_qual_by_pos):
         c_q1s.append(np.percentile(scores, 25))
         c_q3s.append(np.percentile(scores, 75))
 
-# 5. Plotting
 plt.figure(figsize=(12, 6))
 plt.plot(c_positions, c_medians, color='purple', label='Median')
 plt.plot(c_positions, c_q1s, color='blue', label='Q1 (25th)')
@@ -205,3 +205,4 @@ plt.legend(loc='lower left')
 plt.ylim(0, 45) 
 plt.grid(alpha=0.3)
 plt.show()
+

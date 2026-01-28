@@ -7,4 +7,3 @@ import gzip
 import matplotlib.pyplot as plt
 import numpy as np
 
-cd "Python Learning\SequencingTutorial"
